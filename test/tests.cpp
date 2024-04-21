@@ -20,7 +20,7 @@ TEST(test2, CheckSuffix) {
     MarkovGenerator markovGenerator;
 
     std::string text = "Lorem ipsum dolor sit amet,";
-    text += "consectetuer adipiscing elit.";
+                text += "consectetuer adipiscing elit.";
 
     markovGenerator.CreateTable(text, 2);
     Prefix prefix = { "Lorem", "ipsum" };
@@ -32,7 +32,7 @@ TEST(test3, SingleSuffixSelection) {
     MarkovGenerator markovGenerator;
 
     std::string text = "Lorem ipsum dolor sit amet,";
-    text += "consectetuer adipiscing elit at.";
+                text += "consectetuer adipiscing elit at.";
 
     markovGenerator.CreateTable(text, 2);
     std::string gen = markovGenerator.Generate(18, 10);
@@ -44,7 +44,7 @@ TEST(test4, ManySuffixes) {
     MarkovGenerator markovGenerator;
 
     std::string text = "Lorem ipsum dolor sit amet,";
-    text += "consectetuer adipiscing elit.";
+                text += "consectetuer adipiscing elit.";
 
     Prefix prefix = { "ipsum" };
     std::vector<std::string> suffix = { "dolor" };
@@ -58,7 +58,7 @@ TEST(test5, TextFormation) {
     MarkovGenerator markovGenerator;
 
     std::string text = "Lorem ipsum dolor sit amet,";
-    test += "consectetuer adipiscing elit aenean commodo ligula eget";
+                text += "consectetuer adipiscing elit aenean commodo ligula eget";
 
     std::map<Prefix, std::vector<std::string>> statetab = {
         {{"Lorem", "ipsum"}, {"dolor"}},
