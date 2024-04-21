@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 #include <string>
-#include "textgen.h"
+#include "../include/textgen.h"
 
 TEST(test1, PrefixFormation) {
     MarkovGenerator markovGenerator;

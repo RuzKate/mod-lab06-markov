@@ -1,11 +1,9 @@
 // Copyright 2024 RuzKate
 
 #include <iostream>
-// Copyright 2024 RuzKate
-
 #include <cstdlib>
 #include <random>
-#include "textgen.h"
+#include "../include/textgen.h"
 
 void MarkovGenerator::CreateTable(std::string text, int count) {
     std::vector<std::string> words;

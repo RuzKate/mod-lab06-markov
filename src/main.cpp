@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string>
 #include <locale>
-#include "textgen.h"
+#include "../include/textgen.h"
 
 std::string readText(const std::string& filename) {
     std::string text;
