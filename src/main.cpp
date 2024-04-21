@@ -22,8 +22,7 @@ std::string readText(const std::string& filename) {
     return text;
 }
 
-int main()
-{
+int main() {
     const int NREF = 2;
     const int MAXGEN = 1000;
 

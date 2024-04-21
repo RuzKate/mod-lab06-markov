@@ -57,12 +57,10 @@ std::string MarkovGenerator::Generate(int count, unsigned int time_generate) {
                 genText += suffixes[randomIndex] + ' ';
                 prefix.pop_front();
                 prefix.push_back(suffixes[randomIndex]);
-            }
-            else {
+            } else {
                 break;
             }
-        }
-        else {
+        } else {
             break;
         }
     }
