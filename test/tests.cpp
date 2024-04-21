@@ -25,7 +25,7 @@ TEST(test2, CheckSuffix) {
     markovGenerator.CreateTable(text, 2);
     Prefix prefix = { "Lorem", "ipsum" };
 
-    EXPECT_NE(markovGenerator.getTab().[prefix][0], "dolor");
+    EXPECT_NE(markovGenerator.getTab().at(prefix)[0], "dolor");
 }
 
 TEST(test3, SingleSuffixSelection) {
@@ -58,7 +58,8 @@ TEST(test5, TextFormation) {
     MarkovGenerator markovGenerator;
 
     std::string text = "Lorem ipsum dolor sit amet,";
-                text += "consectetuer adipiscing elit aenean commodo ligula eget";
+                text += "consectetuer adipiscing elit";
+                text += "aenean commodo ligula eget";
 
     std::map<Prefix, std::vector<std::string>> statetab = {
         {{"Lorem", "ipsum"}, {"dolor"}},
