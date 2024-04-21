@@ -13,14 +13,14 @@ TEST(test1, PrefixFormation) {
     Prefix prefix = {"Lorem", "ipsum"};
 
     std::map<Prefix, std::vector<std::string>> tab = markovGenerator.getTab();
-    EXPECT_NE(tab.find(prefix), tab.end();
+    EXPECT_NE(tab.find(prefix), tab.end());
 }
 
 TEST(test2, CheckSuffix) {
     MarkovGenerator markovGenerator;
 
-    std::string text = "Lorem ipsum dolor sit amet, 
-    consectetuer adipiscing elit.";
+    std::string text = "Lorem ipsum dolor sit amet,";
+    text += "consectetuer adipiscing elit.";
 
     markovGenerator.CreateTable(text, 2);
     Prefix prefix = { "Lorem", "ipsum" };
@@ -31,8 +31,8 @@ TEST(test2, CheckSuffix) {
 TEST(test3, SingleSuffixSelection) {
     MarkovGenerator markovGenerator;
 
-    std::string text = "Lorem ipsum dolor sit amet, \
-    consectetuer adipiscing elit at.";
+    std::string text = "Lorem ipsum dolor sit amet,";
+    text += "consectetuer adipiscing elit at.";
 
     markovGenerator.CreateTable(text, 2);
     std::string gen = markovGenerator.Generate(18, 10);
@@ -43,8 +43,8 @@ TEST(test3, SingleSuffixSelection) {
 TEST(test4, ManySuffixes) {
     MarkovGenerator markovGenerator;
 
-    std::string text = "Lorem ipsum dolor sit amet, \
-    consectetuer adipiscing elit.";
+    std::string text = "Lorem ipsum dolor sit amet,";
+    text += "consectetuer adipiscing elit.";
 
     Prefix prefix = { "ipsum" };
     std::vector<std::string> suffix = { "dolor" };
@@ -57,8 +57,8 @@ TEST(test4, ManySuffixes) {
 TEST(test5, TextFormation) {
     MarkovGenerator markovGenerator;
 
-    std::string text = "Lorem ipsum dolor sit amet, \
-    consectetuer adipiscing elit aenean commodo ligula eget";
+    std::string text = "Lorem ipsum dolor sit amet,";
+    test += "consectetuer adipiscing elit aenean commodo ligula eget";
 
     std::map<Prefix, std::vector<std::string>> statetab = {
         {{"Lorem", "ipsum"}, {"dolor"}},
