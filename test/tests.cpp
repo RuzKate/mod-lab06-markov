@@ -19,13 +19,13 @@ TEST(test1, PrefixFormation) {
 TEST(test2, CheckSuffix) {
     MarkovGenerator markovGenerator;
 
-    std::string text = "Lorem ipsum dolor sit amet,";
-                text += "consectetuer adipiscing elit.";
+    std::string text = "Lorem ipsum dolor sit amet";
 
     markovGenerator.CreateTable(text, 2);
-    Prefix prefix = { "Lorem", "ipsum" };
+    Prefix prefix = {"Lorem", "ipsum"};
 
-    EXPECT_NE(markovGenerator.getTab().at(prefix)[0], "dolor");
+    std::map<Prefix, std::vector<std::string>> tab = markovGenerator.getTab();
+    EXPECT_NE(tab.at(prefix)[0], "dolor");
 }
 
 TEST(test3, SingleSuffixSelection) {
