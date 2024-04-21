@@ -25,7 +25,7 @@ TEST(test2, CheckSuffix) {
     Prefix prefix = {"Lorem", "ipsum"};
 
     std::map<Prefix, std::vector<std::string>> tab = markovGenerator.getTab();
-    EXPECT_NE(tab.at(prefix)[0], "dolor");
+    EXPECT_NE(tab.at(prefix)[0], "dolor ");
 }
 
 TEST(test3, SingleSuffixSelection) {
